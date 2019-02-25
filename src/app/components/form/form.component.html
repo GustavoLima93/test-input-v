@@ -1,0 +1,21 @@
+<form action="" [formGroup]="form" (ngSubmit)="subimtForm(form)" class="mt-5">
+  <div class="row col-sm-12">
+    <div class="col-sm-4">
+      <lib-input-v [label]='"Nome :"' [errorMessage]='"Este campo é obrigatório !"'>
+        <input formControlName='nome' class="form-control" type="text">
+      </lib-input-v>
+    </div>
+    <div class="col-sm-4">
+      <lib-input-v [label]='"Sobrenome :"' [errorMessage]='"Este campo é obrigatório !"'>
+        <input formControlName='sobrenome' class="form-control" type="text">
+      </lib-input-v>
+    </div>
+    <div class="col-sm-4">
+      <lib-input-v [label]='"Email :"' [errorMessage]='"Este campo é obrigatório !"'>
+        <input formControlName='email' class="form-control" type="text">
+      </lib-input-v>
+    </div>
+  </div>
+  <div class="col-sm-12 border-top mt-5 "></div>
+  <button type="submit" class="btn btn-outline-secondary mt-3 float-right" [disabled]='form.invalid'>Enviar</button>
+</form>
